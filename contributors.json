@@ -1,7 +1,7 @@
 {
   "title": "List of contributors to the SMSSync project",
   "note": "Sorted by last name",
-  "total": 16,
+  "total": 17,
   "contributors": [
     {
       "name": "Milan Andric",
@@ -158,6 +158,17 @@
       }
     },
     {
+      "name": "Sorin Pohontu",
+      "email": "sorin@frontline.ro",
+      "website": "http://www.frontline.ro",
+      "description": "Stress testing, bugs reports, suggested improvements and code hints.",
+      "country": {
+        "name": "Romania",
+        "latitude": 47.637849,
+        "longitude": 26.231793
+      }
+    },
+    {
       "name": "Tobias Quinn",
       "email": "tobias@tobiasquinn.com",
       "website": "https://github.com/tobiasquinn",
@@ -188,6 +199,17 @@
         "name": "Russia",
         "latitude": 52.29778,
         "longitude": 104.29639
+      }
+    },
+    {
+      "name": "Kirk Saviour Agbenyegah",
+      "email": "savekirk@gmail.com",
+      "website": "",
+      "description": "Bug fixes",
+      "country": {
+        "name": "Ghana",
+        "latitude": 5.5500,
+        "longitude": 0.2000
       }
     }
   ]

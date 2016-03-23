@@ -1,3 +1,4 @@
+<?xml version="1.0" encoding="utf-8"?>
 <!--
   ~ Copyright (c) 2010 - 2015 Ushahidi Inc
   ~ All rights reserved
@@ -16,20 +17,19 @@
   -->
 
 <menu xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto">
+      xmlns:app="http://schemas.android.com/apk/res-auto">
+    <item
+            android:id="@+id/share_menu"
+            android:icon="@drawable/ic_share_24dp"
+            android:orderInCategory="1"
+            android:title="@string/share"
+            app:actionProviderClass="android.support.v7.widget.ShareActionProvider"
+            app:showAsAction="ifRoom"/>
 
     <item
-        android:id="@+id/share_menu"
-        android:icon="@drawable/share"
-        android:orderInCategory="1"
-        android:title="@string/share"
-        app:actionProviderClass="android.support.v7.widget.ShareActionProvider"
-        app:showAsAction="ifRoom" />
-
-    <item
-        android:id="@+id/delete_log_menu"
-        android:icon="@drawable/delete"
-        android:orderInCategory="1"
-        android:title="@string/menu_delete_all"
-        app:showAsAction="ifRoom" />
+            android:id="@+id/delete_log_menu"
+            android:icon="@drawable/ic_delete_white_24dp"
+            android:orderInCategory="1"
+            android:title="@string/menu_delete_all"
+            app:showAsAction="ifRoom"/>
 </menu>

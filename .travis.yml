@@ -1,13 +1,20 @@
+sudo: false
 language: android
+jdk: oraclejdk8
+before_install:
+  - export JAVA8_HOME=$JAVA_HOME
+  - android list sdk --no-ui --all --extended
 android:
   components:
-    - android-22
-    - build-tools-22.0.0
-    - extra-android-support
-    - extra-android-m2repository
-
-script: ./gradlew build
+  - build-tools-23.0.1
+  - android-23
+  - extra-android-support
+  - extra-android-m2repository
+    
+script: ./gradlew clean build -x validateReleaseSignSigning
 notifications:
   hipchat:
+    template: '<a href="%{build_url}">%{repository}#%{build_number}</a> (%{branch} - <a href="%{compare_url}">%{commit}</a> : %{author}): %{message}'
+    format: html
     rooms:
-      secure: pofqFB1dvZq/Ue0okcuy3cWDKMxkq/5acPGoK2VlB8Sj1OEPm3Uau2y4Kx0DKtV9vQCLmAwc9Wvy26eIbihFIjzM6O8BDS5kdWlApJIlnJtT5hJ/YT5JB0jDHW6P1aU4muu9PXtBMMZhUWmBU3jIUPTgiLbCAygCYPGOkVRku+g=
+      secure: WiQT1MnkaN41pXrDA/OFzpTU88K7UZZrV2ESGPD8Cz5KJOCJUeFZlmSlRZiwmVj5SBKP/7k2dVfmtoA/4exhKgRzei9UF63udwDBN63HCwb4CUGMWRbJYub99KB/QW5J52M4fsDd8w3p20I9L2ht9rZJMzqU+QPxcuNtkdEYZgA=
